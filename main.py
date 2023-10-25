@@ -4,7 +4,7 @@ from random import shuffle
 
 
 def begin():
-    error = 0
+    error = []
     shuffle(quest)
     print()
     for q in quest:
@@ -12,8 +12,12 @@ def begin():
         print(q[0])
         answer = input("? ")
         if answer != q[1]:
-            error += 1
-    print(f"\nОшибок {error}")
+            error.append(q[0])
+    if error:
+        print("\nОшибки:\n")
+        for i in error:
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print(i)
 
 def main():
     begin()
