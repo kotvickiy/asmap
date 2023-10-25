@@ -1,17 +1,19 @@
 from questions import *
-
-
+from random import shuffle
 
 
 
 def fun_begin():
+    shuffle(quest)
+    print()
     for q in quest:
+        print("-------------------------------------------------------------------------------------")
         print(q[0])
         answer = input("? ")
         if answer == q[1]:
-            print("ok")
+            print("ok\n")
         else:
-            print("no")
+            print("no\n")
 
 
 def main():
